@@ -1,11 +1,8 @@
 const data = [
-      { year: 2010, count: 10 },
-      { year: 2011, count: 20 },
-      { year: 2012, count: 15 },
-      { year: 2013, count: 25 },
-      { year: 2014, count: 22 },
-      { year: 2015, count: 30 },
-      { year: 2016, count: 28 },
+      { mes: "Enero", total: 10 },
+      { mes: "Febrero", total: 20 },
+      { mes: "Marzo", total: 14 },
+      { mes: "Abril", total: 21 },
     ];
 
 function crearChart(){
@@ -16,11 +13,11 @@ function crearChart(){
    {
      type: 'bar',
      data: {
-       labels: data.map(row => row.year),
+       labels: data.map(row => row.mes),
        datasets: [
          {
-           label: 'Acquisitions by year',
-           data: data.map(row => row.count)
+           label: 'Valores del mes',
+           data: data.map(row => row.total)
          }
        ]
      }
